@@ -6,49 +6,49 @@ let products = {
       productName: "Regular White T-shirt",
       category: "Topwear",
       price: "30",
-      image: "white-tshirt.jpg",
+      image: "./assets/white-tshirt.jpg",
     },
     {
       productName: "Beige Short Skirt",
       category: "Bottomwear",
       price: "49",
-      image: "short-skirt.jpg",
+      image: "./assets/short-skirt.jpg",
     },
     {
       productName: "Sporty SmartWatch",
       category: "Watch",
       price: "99",
-      image: "sporty-smartwatch.jpg",
+      image: "./assets/sporty-smartwatch.jpg",
     },
     {
       productName: "Basic Knitted Top",
       category: "Topwear",
       price: "29",
-      image: "knitted-top.jpg",
+      image: "./assets/knitted-top.jpg",
     },
     {
       productName: "Black Leather Jacket",
       category: "Jacket",
       price: "129",
-      image: "black-leather-jacket.jpg",
+      image: "./assets/black-leather-jacket.jpg",
     },
     {
       productName: "Stylish Pink Trousers",
       category: "Bottomwear",
       price: "89",
-      image: "pink-trousers.jpg",
+      image: "./assets/pink-trousers.jpg",
     },
     {
       productName: "Brown Men's Jacket",
       category: "Jacket",
       price: "189",
-      image: "brown-jacket.jpg",
+      image: "./assets/brown-jacket.jpg",
     },
     {
       productName: "Comfy Gray Pants",
       category: "Bottomwear",
       price: "49",
-      image: "comfy-gray-pants.jpg",
+      image: "./assets/comfy-gray-pants.jpg",
     },
   ],
 };
@@ -56,8 +56,8 @@ let products = {
 for (let i of products.data) {
   // Create Card
   let card = document.createElement("div");
-  //  Card should have category
-  card.classList.add("card", "i.category");
+  //  Card should have category and should stay hidden initally
+  card.classList.add("card", "i.category", "hide");
 
   //  Create Image div
   let imgContainer = document.createElement("div");
@@ -72,6 +72,26 @@ for (let i of products.data) {
   //   place imgContainer inside card element (div)
   card.appendChild(imgContainer);
 
+  // Create Container
+  let container = document.createElement("div");
+  container.classList.add("container");
+
+  // Product name
+  let name = document.createElement("h5");
+  name.classList.add("product-name");
+  name.innerText = i.productName.toUpperCase();
+
+  // append name to container
+  container.appendChild(name);
+
+  // Price
+  let price = document.createElement("h6");
+  price.innerText = `$ ${i.price}`;
+  // place price inside container
+  container.appendChild(price);
+
   //   place products inside card
   document.getElementById("products").appendChild(card);
+  // place container inside card
+  card.appendChild(container);
 }
