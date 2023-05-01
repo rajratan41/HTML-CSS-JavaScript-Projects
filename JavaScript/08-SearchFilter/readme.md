@@ -14,4 +14,4 @@
 
 ## Screenshot
 
-![screenshot](./images/split%20landing%20page.png)
+![screenshot](./assets/search%20js.png)
