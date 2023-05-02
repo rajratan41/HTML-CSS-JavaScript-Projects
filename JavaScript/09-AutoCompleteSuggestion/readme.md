@@ -14,4 +14,4 @@
 
 ## Screenshot
 
-![screenshot]()
+![screenshot](./assets/Auto%20Complete.png)
