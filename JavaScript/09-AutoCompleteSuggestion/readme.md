@@ -10,7 +10,7 @@
 
 ## Links
 
-- [Live demo]()
+- [Live demo](https://autosjs.netlify.app/)
 
 ## Screenshot
 
